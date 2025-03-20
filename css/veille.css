@@ -1,8 +1,9 @@
 :root {
-    --primary: #0984E3;
-    --dark: #2D3436;
-    --light: #ffffff;
-    --gradient: linear-gradient(135deg, #0984E3 0%, #74b9ff 100%);
+    --primary: #2D3436;
+    --accent: #0984E3;
+    --gradient: linear-gradient(45deg, #0984E3, #00CEC9);
+    --text: #2D3436;
+    --bg: #FFFFFF;
 }
 
 body {
