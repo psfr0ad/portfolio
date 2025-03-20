@@ -1,0 +1,1353 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Veille technologique sur PHP et ses frameworks - Laravel, Symfony">
+    <title>Veille Technologique | Portfolio</title>
+
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/veille.css">
+
+    <!-- Preload des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Conteneur pour les particules -->
+    <div id="particles-js" class="particles-container"></div>
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">&lt;/&gt;léonard</a>
+            <div class="nav-links">
+                <a href="projets.html" class="nav-link"><code>&lt;/&gt;</code> Projets</a>
+                <a href="veille.html" class="nav-link"><i class="fas fa-rss"></i> 📡 Veille</a>
+                <a href="certifications.html" class="nav-link"><i class="fas fa-certificate"></i> Certifications</a>
+                <a href="competences.html" class="nav-link active"><i class="fas fa-code"></i> Compétences</a>
+                <a href="assets/cv.pdf" class="nav-link cv-link"><i class="fas fa-download"></i> CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content text-center" data-aos="fade-up">
+                <span class="subtitle">
+                    <div class="subtitle-line"></div>
+                    Veille Technologique
+                </span>
+                <h1>Découvrez mes analyses sur<br><span class="typed-text"></span></h1>
+                <p class="description">
+                    Restez à jour avec les dernières évolutions technologiques et les bonnes pratiques
+                    de développement dans l'écosystème PHP.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <div class="container">
+            <div class="category-filters">
+                <button type="button" class="category-btn active" data-category="all">
+                    <i class="fas fa-globe"></i> Tout
+                </button>
+                <button type="button" class="category-btn" data-category="frameworks">
+                    <i class="fas fa-layer-group"></i> Frameworks
+                </button>
+                <button type="button" class="category-btn" data-category="php">
+                    <i class="fab fa-php"></i> PHP
+                </button>
+                <button type="button" class="category-btn" data-category="security">
+                    <i class="fas fa-shield-alt"></i> Sécurité
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Articles Section -->
+    <section class="articles">
+        <div class="container">
+            <div class="row">
+                <!-- ARTICLES FRAMEWORKS -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="frameworks">
+                        <div class="article-image">
+                            <img src="assets/img/laravel-11.jpg" alt="Laravel 11">
+                            <span class="tag">Laravel</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Laravel 11 : Performance et Nouveautés</h3>
+                            <p>Découverte des améliorations majeures de Laravel 11, incluant le nouveau moteur de
+                                rendu
+                                Folio.</p>
+                            <div class="article-meta">
+                                <span class="source">Source: Laravel Blog</span>
+                                <a href="https://blog.laravel.com/laravel-11-released" target="_blank"
+                                    class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 15 Mars 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal"
+                                    data-bs-target="#modalLaravel11">Lire plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="frameworks">
+                        <div class="article-image">
+                            <img src="assets/img/symfony7.jpg" alt="Symfony 7.0">
+                            <span class="tag">Symfony</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Symfony 7.0 : La révolution PHP</h3>
+                            <p>Analyse des nouvelles fonctionnalités de Symfony 7.0 et de son impact sur le
+                                développement moderne.</p>
+                            <div class="article-meta">
+                                <span class="source">Source: Symfony Blog</span>
+                                <a href="https://symfony.com/blog" target="_blank" class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 1 Mars 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal"
+                                    data-bs-target="#modalSymfony7">Lire plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="frameworks">
+                        <div class="article-image">
+                            <img src="assets/img/livewire.jpg" alt="Livewire 3.0">
+                            <span class="tag">Laravel</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Livewire 3.0 : Le Full-Stack sans JavaScript</h3>
+                            <p>Comment Livewire 3.0 transforme le développement d'applications dynamiques en PHP.
+                            </p>
+                            <div class="article-meta">
+                                <span class="source">Source: Livewire Documentation</span>
+                                <a href="https://livewire.laravel.com" target="_blank" class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 15 Février 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal"
+                                    data-bs-target="#modalLivewire">Lire plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="frameworks">
+                        <div class="article-image">
+                            <img src="assets/img/api-platform.jpg" alt="API Platform 4">
+                            <span class="tag">Symfony</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>API Platform 4.0 : APIs modernes avec Symfony</h3>
+                            <p>Les nouvelles fonctionnalités d'API Platform 4.0 pour créer des APIs RESTful et
+                                GraphQL.
+                            </p>
+                            <div class="article-meta">
+                                <span class="source">Source: API Platform Blog</span>
+                                <a href="https://api-platform.com/blog" target="_blank" class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 1 Février 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal"
+                                    data-bs-target="#modalApiPlatform">Lire plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="frameworks">
+                        <div class="article-image">
+                            <img src="assets/img/inertia.jpg" alt="Inertia.js">
+                            <span class="tag">Laravel</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Inertia.js 2.0 : Le pont entre Laravel et Vue.js</h3>
+                            <p>Comment Inertia.js 2.0 révolutionne le développement d'applications monolithiques
+                                modernes.</p>
+                            <div class="article-meta">
+                                <span class="source">Source: Inertia Documentation</span>
+                                <a href="https://inertiajs.com" target="_blank" class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 15 Janvier 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalInertia">Lire
+                                    plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ARTICLES SÉCURITÉ -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="security">
+                        <div class="article-image">
+                            <img src="assets/img/oauth2.jpg" alt="OAuth 2.1">
+                            <span class="tag">Sécurité</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>OAuth 2.1 et OpenID Connect en PHP</h3>
+                            <p>Implémentation sécurisée de l'authentification moderne avec OAuth 2.1 et OpenID
+                                Connect.
+                            </p>
+                            <div class="article-meta">
+                                <span class="source">Source: OAuth.net</span>
+                                <a href="https://oauth.net/2.1/" target="_blank" class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 20 Mars 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalOauth">Lire
+                                    plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="security">
+                        <div class="article-image">
+                            <img src="assets/img/csrf.jpg" alt="CSRF Protection">
+                            <span class="tag">Sécurité</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Protection CSRF Avancée en PHP</h3>
+                            <p>Nouvelles techniques de protection contre les attaques CSRF dans les applications
+                                modernes.</p>
+                            <div class="article-meta">
+                                <span class="source">Source: OWASP</span>
+                                <a href="https://owasp.org/www-community/attacks/csrf" target="_blank"
+                                    class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 5 Mars 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalCsrf">Lire
+                                    plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="security">
+                        <div class="article-image">
+                            <img src="assets/img/jwt.jpg" alt="JWT Security">
+                            <span class="tag">Sécurité</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Sécurisation des JWT en PHP</h3>
+                            <p>Meilleures pratiques pour l'utilisation sécurisée des JSON Web Tokens dans vos
+                                applications.</p>
+                            <div class="article-meta">
+                                <span class="source">Source: jwt.io</span>
+                                <a href="https://jwt.io" target="_blank" class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 20 Février 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalJwt">Lire
+                                    plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="security">
+                        <div class="article-image">
+                            <img src="assets/img/2fa.jpg" alt="2FA Implementation">
+                            <span class="tag">Sécurité</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Authentification 2FA Moderne en PHP</h3>
+                            <p>Implémentation de l'authentification à deux facteurs avec les dernières normes TOTP.
+                            </p>
+                            <div class="article-meta">
+                                <span class="source">Source: PHP Security Guide</span>
+                                <a href="https://phpsecurity.readthedocs.io" target="_blank" class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 5 Février 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modal2fa">Lire
+                                    plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="security">
+                        <div class="article-image">
+                            <img src="assets/img/xss.jpg" alt="XSS Prevention">
+                            <span class="tag">Sécurité</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Protection contre les XSS en 2025</h3>
+                            <p>Nouvelles stratégies de défense contre les attaques XSS dans les applications PHP
+                                modernes.</p>
+                            <div class="article-meta">
+                                <span class="source">Source: OWASP XSS Guide</span>
+                                <a href="https://owasp.org/www-community/attacks/xss/" target="_blank"
+                                    class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 15 Janvier 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalXss">Lire
+                                    plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- ARTICLES PHP -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="php">
+                        <div class="article-image">
+                            <img src="assets/img/php84.jpg" alt="PHP 8.4">
+                            <span class="tag">PHP</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>PHP 8.4 : Les nouveautés attendues</h3>
+                            <p>Découverte des fonctionnalités majeures de PHP 8.4, incluant les améliorations de
+                                performances et les nouvelles syntaxes.</p>
+                            <div class="article-meta">
+                                <span class="source">Source: RFC PHP</span>
+                                <a href="https://wiki.php.net/rfc" target="_blank" class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 10 Mars 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalPhp84">Lire
+                                    plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="php">
+                        <div class="article-image">
+                            <img src="assets/img/php-fibers.jpg" alt="PHP Fibers">
+                            <span class="tag">PHP</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Programmation asynchrone avec PHP Fibers</h3>
+                            <p>Guide complet sur l'utilisation des Fibers pour la programmation asynchrone en PHP
+                                moderne.</p>
+                            <div class="article-meta">
+                                <span class="source">Source: PHP Manual</span>
+                                <a href="https://www.php.net/manual/en/language.fibers.php" target="_blank"
+                                    class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 25 Février 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal"
+                                    data-bs-target="#modalPhpFibers">Lire plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="php">
+                        <div class="article-image">
+                            <img src="assets/img/php-jit.jpg" alt="PHP JIT">
+                            <span class="tag">PHP</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Optimisation du JIT Compiler en PHP</h3>
+                            <p>Analyse approfondie des améliorations du compilateur JIT et son impact sur les
+                                performances PHP.</p>
+                            <div class="article-meta">
+                                <span class="source">Source: PHP Internals</span>
+                                <a href="https://www.php.net/manual/en/intro.opcache.php" target="_blank"
+                                    class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 15 Février 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal" data-bs-target="#modalPhpJit">Lire
+                                    plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="php">
+                        <div class="article-image">
+                            <img src="assets/img/php-attributes.jpg" alt="PHP Attributes">
+                            <span class="tag">PHP</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Attributes en PHP : Cas d'usage avancés</h3>
+                            <p>Exploration des utilisations avancées des attributs PHP pour un code plus expressif
+                                et
+                                maintenable.</p>
+                            <div class="article-meta">
+                                <span class="source">Source: PHP.net Blog</span>
+                                <a href="https://www.php.net/manual/en/language.attributes.php" target="_blank"
+                                    class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 5 Février 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal"
+                                    data-bs-target="#modalPhpAttributes">Lire plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <article class="article-card" data-category="php">
+                        <div class="article-image">
+                            <img src="assets/img/php-enums.jpg" alt="PHP Enums">
+                            <span class="tag">PHP</span>
+                        </div>
+                        <div class="article-content">
+                            <h3>Enums en PHP : Bonnes pratiques et patterns</h3>
+                            <p>Guide complet sur l'utilisation efficace des énumérations en PHP moderne avec des
+                                exemples concrets.</p>
+                            <div class="article-meta">
+                                <span class="source">Source: PHP Documentation</span>
+                                <a href="https://www.php.net/manual/en/language.enumerations.php" target="_blank"
+                                    class="source-link">
+                                    <i class="fas fa-external-link-alt"></i>
+                                </a>
+                            </div>
+                            <div class="article-footer">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 20 Janvier 2025</span>
+                                <a href="#" class="read-more" data-bs-toggle="modal"
+                                    data-bs-target="#modalPhpEnums">Lire plus</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pagination -->
+    <section class="pagination-section">
+        <div class="container">
+            <nav aria-label="Navigation des articles">
+                <ul class="pagination justify-content-center" id="pagination">
+                    <li class="page-item active"><a class="page-link" href="#" data-page="1">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#" data-page="2">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#" data-page="3">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#" data-page="4">4</a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Modales pour les articles -->
+    <div class="modal-container">
+        <!-- Modales Frameworks -->
+        <div class="modal fade" id="modalSymfony7" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Symfony 7.0 : La révolution PHP</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/symfony7.jpg" alt="Symfony 7.0" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 1 Mars 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> Framework</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>Symfony 7.0 apporte une révolution dans l'écosystème PHP avec des améliorations
+                                majeures
+                                de performances et de nouvelles fonctionnalités.</p>
+
+                            <h2>Nouveautés majeures</h2>
+                            <ul>
+                                <li>Support natif de PHP 8.3</li>
+                                <li>Nouveau système de cache</li>
+                                <li>Amélioration du système de routing</li>
+                                <li>Support amélioré des attributs PHP</li>
+                            </ul>
+
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+#[Route('/api/posts', methods: ['GET'])]
+#[CacheControl(maxAge: 3600, public: true)]
+public function getPosts(): JsonResponse
+{
+    return $this->json($this->postRepository->findAll());
+}
+                            </code></pre>
+
+                            <div class="source-section">
+                                <h3>Sources et références</h3>
+                                <ul>
+                                    <li><a href="https://symfony.com/blog" target="_blank">Blog Symfony</a></li>
+                                    <li><a href="https://symfony.com/doc/7.0" target="_blank">Documentation Symfony
+                                            7.0</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://symfony.com/blog" class="btn btn-primary" target="_blank">Source
+                            originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modale Livewire -->
+        <div class="modal fade" id="modalLivewire" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Livewire 3.0 : Le Full-Stack sans JavaScript</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/livewire.jpg" alt="Livewire 3.0" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 15 Février 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> Framework</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>Livewire 3.0 transforme la façon dont nous développons des applications dynamiques en
+                                PHP, en éliminant le besoin d'écrire du JavaScript.</p>
+
+                            <h2>Fonctionnalités clés</h2>
+                            <ul>
+                                <li>Nouveau système de rendu</li>
+                                <li>Support des composants imbriqués</li>
+                                <li>Gestion améliorée des états</li>
+                                <li>Optimisations de performance</li>
+                            </ul>
+
+                            <h2>Exemple de composant</h2>
+                            <pre><code class="language-php">
+class SearchPosts extends Component
+{
+    public string $search = '';
+    
+    public function render()
+    {
+        return view('livewire.search-posts', [
+            'posts' => Post::where('title', 'like', "%{$this->search}%")->get()
+        ]);
+    }
+}
+                            </code></pre>
+
+                            <div class="source-section">
+                                <h3>Sources et références</h3>
+                                <ul>
+                                    <li><a href="https://livewire.laravel.com" target="_blank">Documentation
+                                            Livewire</a></li>
+                                    <li><a href="https://laravel-news.com" target="_blank">Laravel News</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://livewire.laravel.com" class="btn btn-primary" target="_blank">Source
+                            originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- API Platform 4.0 -->
+        <div class="modal fade" id="modalApiPlatform" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">API Platform 4.0 : APIs modernes avec Symfony</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/api-platform.jpg" alt="API Platform 4" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 1 Février 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> Framework</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>API Platform 4.0 révolutionne la création d'APIs RESTful et GraphQL avec Symfony, en
+                                introduisant de nouvelles fonctionnalités puissantes.</p>
+
+                            <h2>Nouveautés majeures</h2>
+                            <ul>
+                                <li>Support natif de GraphQL Federation</li>
+                                <li>Nouveau système de validation</li>
+                                <li>Documentation OpenAPI améliorée</li>
+                                <li>Performance optimisée</li>
+                            </ul>
+
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+#[ApiResource(
+    operations: [
+        new Get(),
+        new GetCollection(),
+        new Post(security: "is_granted('ROLE_ADMIN')")
+    ],
+    formats: ['jsonld', 'json']
+)]
+class Product
+{
+    #[ApiProperty(identifier: true)]
+    public int $id;
+
+    #[ApiProperty(description: 'Nom du produit')]
+    public string $name;
+}
+                            </code></pre>
+
+                            <div class="source-section">
+                                <h3>Sources et références</h3>
+                                <ul>
+                                    <li><a href="https://api-platform.com" target="_blank">Documentation API
+                                            Platform</a></li>
+                                    <li><a href="https://symfony.com" target="_blank">Symfony Documentation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://api-platform.com" class="btn btn-primary" target="_blank">Source
+                            originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Inertia.js 2.0 -->
+        <div class="modal fade" id="modalInertia" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Inertia.js 2.0 : Le pont entre Laravel et Vue.js</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/inertia.jpg" alt="Inertia.js" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 15 Janvier 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> Framework</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>Inertia.js 2.0 simplifie le développement d'applications monolithiques modernes en
+                                combinant la puissance de Laravel et Vue.js.</p>
+
+                            <h2>Fonctionnalités principales</h2>
+                            <ul>
+                                <li>Nouveau système de rendu</li>
+                                <li>Support SSR amélioré</li>
+                                <li>Gestion optimisée des assets</li>
+                                <li>Meilleure intégration avec Vue 3</li>
+                            </ul>
+
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+// Controller Laravel
+public function index()
+{
+    return Inertia::render('Users/Index', [
+        'users' => User::paginate(10)
+    ]);
+}
+
+// Composant Vue
+export default {
+    props: {
+        users: Object
+    },
+    setup(props) {
+        // Logique du composant
+    }
+}
+                            </code></pre>
+
+                            <div class="source-section">
+                                <h3>Sources et références</h3>
+                                <ul>
+                                    <li><a href="https://inertiajs.com" target="_blank">Documentation Inertia.js</a>
+                                    </li>
+                                    <li><a href="https://laravel.com" target="_blank">Laravel Documentation</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://inertiajs.com" class="btn btn-primary" target="_blank">Source originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- OAuth 2.1 -->
+        <div class="modal fade" id="modalOauth" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">OAuth 2.1 et OpenID Connect en PHP</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/oauth2.jpg" alt="OAuth 2.1" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 20 Mars 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> Sécurité</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>OAuth 2.1 apporte des améliorations significatives en matière de sécurité pour
+                                l'authentification moderne.</p>
+
+                            <h2>Points clés</h2>
+                            <ul>
+                                <li>PKCE obligatoire pour tous les clients</li>
+                                <li>Suppression des flows obsolètes</li>
+                                <li>Intégration avec OpenID Connect</li>
+                                <li>Nouveaux mécanismes de sécurité</li>
+                            </ul>
+
+                            <h2>Exemple d'implémentation</h2>
+                            <pre><code class="language-php">
+use League\OAuth2\Server\AuthorizationServer;
+
+$server = new AuthorizationServer(
+    $clientRepository,
+    $accessTokenRepository,
+    $scopeRepository,
+    $privateKey,
+    $encryptionKey
+);
+
+$server->enableGrantType(
+    new AuthCodeGrant(
+        $authCodeRepository,
+        $refreshTokenRepository,
+        new \DateInterval('PT10M')
+    ),
+    new \DateInterval('PT1H')
+);
+                            </code></pre>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://oauth.net/2.1/" class="btn btn-primary" target="_blank">Source
+                            originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Protection CSRF -->
+        <div class="modal fade" id="modalCsrf" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Protection CSRF Avancée en PHP</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/csrf.jpg" alt="CSRF Protection" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 5 Mars 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> Sécurité</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>Les attaques CSRF restent une menace majeure pour les applications web. Découvrez les
+                                nouvelles techniques de protection.</p>
+
+                            <h2>Techniques de protection</h2>
+                            <ul>
+                                <li>Tokens synchronisés</li>
+                                <li>Double Submit Cookie</li>
+                                <li>SameSite Cookies</li>
+                                <li>Custom Headers</li>
+                            </ul>
+
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+class CsrfProtection
+{
+    public function generateToken(): string
+    {
+        $token = bin2hex(random_bytes(32));
+        $_SESSION['csrf_token'] = $token;
+        return $token;
+    }
+
+    public function validateToken(string $token): bool
+    {
+        return hash_equals(
+            $_SESSION['csrf_token'] ?? '',
+            $token
+        );
+    }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://owasp.org/www-community/attacks/csrf" class="btn btn-primary"
+                            target="_blank">Source originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- JWT Security -->
+        <div class="modal fade" id="modalJwt" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Sécurisation des JWT en PHP</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/jwt.jpg" alt="JWT Security" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 20 Février 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> Sécurité</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>La sécurisation des JSON Web Tokens est cruciale pour la protection des API modernes.
+                            </p>
+
+                            <h2>Bonnes pratiques</h2>
+                            <ul>
+                                <li>Utilisation d'algorithmes sûrs</li>
+                                <li>Gestion des clés</li>
+                                <li>Validation des claims</li>
+                                <li>Rotation des tokens</li>
+                            </ul>
+
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+use Firebase\JWT\JWT;
+
+class JwtManager
+{
+    public function createToken(array $payload): string
+    {
+        return JWT::encode(
+            array_merge($payload, [
+                'exp' => time() + 3600,
+                'iat' => time(),
+                'iss' => 'your-app'
+            ]),
+            $this->getSecretKey(),
+            'ES256'
+        );
+    }
+
+    public function validateToken(string $token): array
+    {
+        try {
+            return JWT::decode(
+                $token,
+                $this->getPublicKey(),
+                ['ES256']
+            );
+        } catch (\Exception $e) {
+            throw new SecurityException('Token invalide');
+        }
+    }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://jwt.io" class="btn btn-primary" target="_blank">Source originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 2FA Authentication -->
+        <div class="modal fade" id="modal2fa" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Authentification 2FA Moderne en PHP</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/2fa.jpg" alt="2FA Implementation" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 5 Février 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> Sécurité</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>L'authentification à deux facteurs est devenue indispensable pour sécuriser les
+                                applications modernes.</p>
+
+                            <h2>Méthodes d'implémentation</h2>
+                            <ul>
+                                <li>TOTP (Time-based One-Time Password)</li>
+                                <li>SMS/Email Verification</li>
+                                <li>Biometric Authentication</li>
+                                <li>Hardware Security Keys</li>
+                            </ul>
+
+                            <h2>Exemple TOTP</h2>
+                            <pre><code class="language-php">
+use OTPHP\TOTP;
+
+class TwoFactorAuth
+{
+    public function generateSecret(): string
+    {
+        $totp = TOTP::create();
+        return $totp->getSecret();
+    }
+
+    public function verifyCode(string $secret, string $code): bool
+    {
+        $totp = TOTP::create($secret);
+        return $totp->verify($code);
+    }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://www.php.net/manual/en/features.security.php" class="btn btn-primary"
+                            target="_blank">Source originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- XSS Protection -->
+        <div class="modal fade" id="modalXss" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Protection contre les XSS en 2025</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/xss.jpg" alt="XSS Prevention" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 15 Janvier 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> Sécurité</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>Les attaques XSS évoluent constamment, nécessitant des stratégies de défense
+                                modernes.
+                            </p>
+
+                            <h2>Stratégies de protection</h2>
+                            <ul>
+                                <li>Content Security Policy (CSP)</li>
+                                <li>Échappement contextuel</li>
+                                <li>Validation des entrées</li>
+                                <li>Sanitization des sorties</li>
+                            </ul>
+
+                            <h2>Exemple de protection</h2>
+                            <pre><code class="language-php">
+class XssProtection
+{
+    public function sanitize(string $input): string
+    {
+        return htmlspecialchars($input, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    }
+
+    public function sanitizeHtml(string $html): string
+    {
+        return strip_tags($html, [
+            'p', 'br', 'strong', 'em', 'ul', 'li'
+        ]);
+    }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://owasp.org/www-community/attacks/xss/" class="btn btn-primary"
+                            target="_blank">Source originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHP 8.4 -->
+        <div class="modal fade" id="modalPhp84" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">PHP 8.4 : Les nouveautés attendues</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/php84.jpg" alt="PHP 8.4" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 10 Mars 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> PHP</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>PHP 8.4 apporte son lot de nouveautés et d'améliorations pour le développement
+                                moderne.
+                            </p>
+
+                            <h2>Nouvelles fonctionnalités</h2>
+                            <ul>
+                                <li>Typed class constants</li>
+                                <li>Enhanced pattern matching</li>
+                                <li>Improved type system</li>
+                                <li>Performance optimizations</li>
+                            </ul>
+
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+class Example
+{
+    public const string VERSION = "1.0.0";
+    
+    public function match(mixed $value): string
+    {
+        return match(true) {
+            $value instanceof DateTime => 'date',
+            is_string($value) => 'string',
+            default => 'unknown'
+        };
+    }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://www.php.net/releases/8.4" class="btn btn-primary" target="_blank">Source
+                            originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHP Fibers -->
+        <div class="modal fade" id="modalPhpFibers" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Programmation asynchrone avec PHP Fibers</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/php-fibers.jpg" alt="PHP Fibers" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 25 Février 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> PHP</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>Les Fibers permettent une nouvelle approche de la programmation asynchrone en PHP,
+                                offrant un contrôle plus fin sur l'exécution du code.</p>
+
+                            <h2>Avantages des Fibers</h2>
+                            <ul>
+                                <li>Exécution non bloquante</li>
+                                <li>Meilleure gestion de la mémoire</li>
+                                <li>Code plus lisible que les callbacks</li>
+                                <li>Performance améliorée</li>
+                            </ul>
+
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+$fiber = new Fiber(function(): void {
+    $value = Fiber::suspend('fiber suspended');
+    echo "Value used to resume fiber: ", $value, "\n";
+});
+
+$value = $fiber->start();
+echo "Fiber suspended with value: ", $value, "\n";
+$fiber->resume('fiber resumed');
+                    </code></pre>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://www.php.net/manual/en/language.fibers.php" class="btn btn-primary"
+                            target="_blank">Source originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHP JIT -->
+        <div class="modal fade" id="modalPhpJit" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Optimisation du JIT Compiler en PHP</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/php-jit.jpg" alt="PHP JIT" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 15 Février 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> PHP</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>Le compilateur JIT (Just-In-Time) de PHP transforme la manière dont le code est
+                                exécuté,
+                                offrant des gains de performance significatifs.</p>
+
+                            <h2>Optimisations clés</h2>
+                            <ul>
+                                <li>Compilation à la volée</li>
+                                <li>Optimisation des boucles</li>
+                                <li>Réduction de l'utilisation mémoire</li>
+                                <li>Amélioration des calculs intensifs</li>
+                            </ul>
+
+                            <h2>Configuration JIT</h2>
+                            <pre><code class="language-ini">
+opcache.enable=1
+opcache.jit_buffer_size=100M
+opcache.jit=1235
+                            </code></pre>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://www.php.net/manual/en/opcache.configuration.php#ini.opcache.jit"
+                            class="btn btn-primary" target="_blank">Source originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHP Attributes -->
+        <div class="modal fade" id="modalPhpAttributes" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Attributes en PHP : Cas d'usage avancés</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/php-attributes.jpg" alt="PHP Attributes" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 5 Février 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> PHP</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>Les attributs PHP offrent une nouvelle façon de définir des métadonnées pour les
+                                classes
+                                et les méthodes.</p>
+
+                            <h2>Cas d'utilisation</h2>
+                            <ul>
+                                <li>Validation de données</li>
+                                <li>Injection de dépendances</li>
+                                <li>Configuration des routes</li>
+                                <li>Documentation API</li>
+                            </ul>
+
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+#[Attribute]
+class Route {
+    public function __construct(
+        public string $path,
+        public string $method = 'GET'
+    ) {}
+}
+
+class UserController {
+    #[Route('/users', method: 'POST')]
+    public function create(#[Validate] UserDTO $user): Response {
+        // Logique de création
+    }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://www.php.net/manual/en/language.attributes.php" class="btn btn-primary"
+                            target="_blank">Source originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PHP Enums -->
+        <div class="modal fade" id="modalPhpEnums" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Enums en PHP : Bonnes pratiques et patterns</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-header">
+                            <img src="assets/img/php-enums.jpg" alt="PHP Enums" class="img-fluid mb-3">
+                            <div class="article-meta">
+                                <span class="date"><i class="far fa-calendar-alt"></i> 20 Janvier 2025</span>
+                                <span class="category"><i class="fas fa-tag"></i> PHP</span>
+                            </div>
+                        </div>
+                        <div class="article-content">
+                            <h2>Introduction</h2>
+                            <p>Les énumérations en PHP apportent une nouvelle façon de modéliser des ensembles de
+                                valeurs fixes.</p>
+
+                            <h2>Avantages des Enums</h2>
+                            <ul>
+                                <li>Type-safety amélioré</li>
+                                <li>Code plus expressif</li>
+                                <li>Meilleure maintenabilité</li>
+                                <li>Support IDE complet</li>
+                            </ul>
+
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+enum Status: string {
+    case DRAFT = 'draft';
+    case PUBLISHED = 'published';
+    case ARCHIVED = 'archived';
+
+    public function getLabel(): string {
+        return match($this) {
+            self::DRAFT => 'En cours',
+            self::PUBLISHED => 'Publié',
+            self::ARCHIVED => 'Archivé'
+        };
+    }
+}
+
+class Article {
+    public function __construct(
+        private Status $status
+    ) {}
+
+    public function publish(): void {
+        $this->status = Status::PUBLISHED;
+    }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                        <a href="https://www.php.net/manual/en/language.enumerations.php" class="btn btn-primary"
+                            target="_blank">Source originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/veille.js"></script>
+</body>
+
+</html>

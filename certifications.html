@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Mes certifications et badges professionnels">
+    <title>Certifications | Portfolio</title>
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+    <link rel="manifest" href="favicon_io/site.webmanifest">
+
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/certifications.css">
+
+    <!-- Preload des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Conteneur pour les particules -->
+    <div id="particles-js" class="particles-container"></div>
+
+    <!-- Navbar minimaliste -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a href="index.html" class="navbar-brand">&lt;/&gt;léonard</a>
+            <div class="nav-links">
+                <a href="projets.html" class="nav-link"><code>&lt;/&gt;</code> Projets</a>
+                <a href="veille.html" class="nav-link"><i class="fas fa-rss"></i> 📡 Veille</a>
+                <a href="certifications.html" class="nav-link"><i class="fas fa-certificate"></i> Certifications</a>
+                <a href="competences.html" class="nav-link active"><i class="fas fa-code"></i> Compétences</a>
+                <a href="assets/cv.pdf" class="nav-link cv-link"><i class="fas fa-download"></i> CV</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content text-center" data-aos="fade-up">
+                <span class="subtitle">
+                    <div class="subtitle-line"></div>
+                    Mes Certifications
+                </span>
+                <h1>Certifications et<br>Badges Professionnels</h1>
+                <p class="description">
+                    Découvrez mes certifications techniques et professionnelles obtenues
+                    pendant mon parcours en BTS SIO.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Certifications -->
+    <section class="certifications">
+        <div class="container">
+            <div class="row">
+                <!-- Certification CCNA -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3>Cisco CCNA</h3>
+                        <p>Certification en cours - Administration réseau et infrastructure Cisco</p>
+                        <div class="certification-status">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 50%"></div>
+                            </div>
+                            <span>En cours</span>
+                        </div>
+                        <a href="https://www.cisco.com/c/en/us/training-events/training-certifications/certifications/associate/ccna.html"
+                            target="_blank" class="btn-verify">
+                            <i class="fas fa-info-circle"></i>
+                            Plus d'infos
+                        </a>
+                    </div>
+                </div>
+
+                <!-- The Odin Project -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3>The Odin Project</h3>
+                        <p>Formation Full-Stack JavaScript/node.js - En cours</p>
+                        <div class="certification-status">
+                            <div class="progress-bar">
+                                <div class="progress" style="width: 40%"></div>
+                            </div>
+                            <span>En cours</span>
+                        </div>
+                        <a href="https://www.theodinproject.com/" target="_blank" class="btn-verify">
+                            <i class="fas fa-info-circle"></i>
+                            Voir le parcours
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Certification PIX -->
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="certification-card">
+                        <div class="certification-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3>PIX</h3>
+                        <p>Certification des compétences numériques</p>
+                        <div class="certification-date">
+                            <i class="far fa-calendar-alt"></i>
+                            Obtenue en 2023
+                        </div>
+                        <a href="https://pix.fr/" target="_blank" class="btn-verify">
+                            <i class="fas fa-external-link-alt"></i>
+                            Vérifier
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/certifications.js"></script>
+</body>
+
+</html>
