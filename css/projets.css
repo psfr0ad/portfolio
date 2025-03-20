@@ -581,38 +581,76 @@ h1 {
 
 .project-details {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 2rem;
-    padding: 1rem;
+    padding: 1.5rem;
 }
 
 .project-images {
-    border-radius: 10px;
+    border-radius: 15px;
     overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 .carousel-item img {
     width: 100%;
-    height: 400px;
-    object-fit: cover;
+    height: auto;
+    max-height: 70vh;
+    object-fit: contain;
+    background-color: #f8f9fa;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 50px;
+    height: 50px;
+    background: var(--accent);
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 0.9;
+    margin: 0 1rem;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+    background: var(--primary);
+}
+
+.carousel-indicators {
+    bottom: -2.5rem;
+}
+
+.carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--accent);
+    opacity: 0.5;
+    margin: 0 5px;
+}
+
+.carousel-indicators button.active {
+    opacity: 1;
 }
 
 .project-info {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
 }
 
 .info-section {
     background: #f8f9fa;
     padding: 1.5rem;
-    border-radius: 10px;
+    border-radius: 12px;
+    margin-bottom: 1.5rem;
 }
 
-.info-section h6 {
-    color: var(--primary);
-    font-weight: 600;
-    margin-bottom: 1rem;
+.info-section:last-child {
+    margin-bottom: 0;
 }
 
 .skills-grid {
@@ -717,5 +755,37 @@ h1 {
 
     .carousel-item img {
         height: 300px;
+    }
+}
+
+/* Améliorations des Modals */
+.modal-dialog.modal-xl {
+    max-width: 90%;
+    margin: 1.75rem auto;
+}
+
+/* Responsive Design pour les Modals */
+@media (min-width: 992px) {
+    .project-details {
+        grid-template-columns: 1.5fr 1fr;
+    }
+
+    .carousel-item img {
+        max-height: 600px;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-dialog.modal-xl {
+        max-width: 95%;
+        margin: 1rem auto;
+    }
+
+    .carousel-item img {
+        max-height: 50vh;
+    }
+
+    .project-info {
+        padding: 1.5rem;
     }
 }

@@ -164,4 +164,17 @@ document.addEventListener('DOMContentLoaded', function () {
         once: true,
         mirror: false
     });
+
+    // Ajouter après le code existant
+    document.querySelectorAll('.carousel-item img').forEach(img => {
+        img.addEventListener('click', function () {
+            if (this.requestFullscreen) {
+                this.requestFullscreen();
+            } else if (this.webkitRequestFullscreen) {
+                this.webkitRequestFullscreen();
+            } else if (this.msRequestFullscreen) {
+                this.msRequestFullscreen();
+            }
+        });
+    });
 }); 
