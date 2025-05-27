@@ -467,7 +467,7 @@
                 <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up">
                     <article class="article-card" data-category="php">
                         <div class="article-image">
-                            <img src="assets/img/php-fibers.jpg" alt="PHP Fibers">
+                            <img src="img/fibers.jpg" alt="PHP Fibers">
                             <span class="tag">PHP</span>
                         </div>
                         <div class="article-content">
@@ -637,26 +637,33 @@
                             </div>
                         </div>
                         <div class="article-content">
-                            <h2>Introduction</h2>
-                            <p>Symfony 7.0 transforme l'écosystème PHP avec des innovations majeures.</p>
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+// Nouveau système de routing avec les attributs
+#[Route('/api/users', methods: ['GET'])]
+public function getUsers(
+    #[MapQueryParameter] int $page = 1,
+    #[MapQueryParameter] int $limit = 10
+): JsonResponse {
+    return $this->json([
+        'users' => $this->userRepository->findPaginated($page, $limit)
+    ]);
+}
 
-                            <h2>Analyse et Pertinence</h2>
-                            <p>Cette version de Symfony est révolutionnaire pour plusieurs aspects :</p>
-                            <ul>
-                                <li>Nouvelle architecture qui améliore la modularité</li>
-                                <li>Performance accrue grâce à l'optimisation du container de services</li>
-                                <li>Intégration native avec les dernières fonctionnalités de PHP 8.3</li>
-                                <li>Système de routing repensé pour plus de flexibilité</li>
-                                <li>Meilleure gestion des dépendances</li>
-                            </ul>
-                            <p>Ces améliorations sont cruciales pour le développement d'applications enterprise-grade.
-                            </p>
+// Nouveau système de cache
+#[Cache(expires: '+2 hours')]
+#[Cache(tags: ['users'])]
+public function getUserProfile(int $id): Response {
+    return $this->render('user/profile.html.twig', [
+        'user' => $this->userRepository->find($id)
+    ]);
+}
+                            </code></pre>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
-                        <a href="https://symfony.com/blog" class="btn btn-primary" target="_blank">Source
-                            originale</a>
+                        <a href="https://symfony.com/blog" class="btn btn-primary" target="_blank">Source originale</a>
                     </div>
                 </div>
             </div>
@@ -671,28 +678,38 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
                     <div class="modal-body">
-                        <div class="article-header">
-                            <img src="assets/img/livewire.jpg" alt="Livewire 3.0" class="img-fluid mb-3">
-                            <div class="article-meta">
-                                <span class="date"><i class="far fa-calendar-alt"></i> 15 Février 2025</span>
-                                <span class="category"><i class="fas fa-tag"></i> Framework</span>
-                            </div>
-                        </div>
                         <div class="article-content">
-                            <h2>Introduction</h2>
-                            <p>Livewire 3.0 redéfinit le développement full-stack en PHP.</p>
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+// Composant Livewire moderne
+class TodoList extends Component
+{
+    public $todos = [];
+    public $newTodo = '';
 
-                            <h2>Analyse et Pertinence</h2>
-                            <p>Livewire 3.0 est une innovation majeure pour plusieurs raisons :</p>
-                            <ul>
-                                <li>Élimination du besoin de JavaScript complexe</li>
-                                <li>Développement plus rapide d'interfaces dynamiques</li>
-                                <li>Meilleure intégration avec l'écosystème Laravel</li>
-                                <li>Réduction de la complexité du code</li>
-                                <li>Amélioration des performances côté client</li>
-                            </ul>
-                            <p>Cette technologie change la façon dont nous développons des applications web modernes.
-                            </p>
+    #[On('todo-added')]
+    public function addTodo()
+    {
+        $this->todos[] = [
+            'id' => uniqid(),
+            'text' => $this->newTodo,
+            'completed' => false
+        ];
+        $this->newTodo = '';
+        $this->dispatch('todo-updated');
+    }
+
+    public function toggleComplete($id)
+    {
+        $this->todos = array_map(function($todo) use ($id) {
+            if($todo['id'] === $id) {
+                $todo['completed'] = !$todo['completed'];
+            }
+            return $todo;
+        }, $this->todos);
+    }
+}
+                            </code></pre>
                         </div>
                     </div>
                     <div class="modal-footer">
@@ -1182,6 +1199,235 @@
                         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
                         <a href="https://www.php.net/manual/en/language.enumerations.php" class="btn btn-primary"
                             target="_blank">Source originale</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal Laravel 11 -->
+        <div class="modal fade" id="modalLaravel11" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Laravel 11 : Performance et Nouveautés</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="article-content">
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+// Nouveau moteur de rendu Folio
+class WelcomePage extends Page
+{
+    public function render()
+    {
+        return view('pages.welcome', [
+            'posts' => Post::latest()->take(3)->get()
+        ]);
+    }
+
+    #[Cache('ttl' => 3600)]
+    public function recentPosts(): Collection
+    {
+        return Post::with('author')
+            ->published()
+            ->latest()
+            ->take(5)
+            ->get();
+    }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal OAuth 2.1 -->
+        <div class="modal fade" id="modalOauth" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="article-content">
+                            <h2>Exemple de code</h2>
+                            <pre><code class="language-php">
+// Configuration OAuth 2.1
+class OAuthProvider
+{
+    #[Secure]
+    public function configureOAuth(): void
+    {
+        $provider = new \League\OAuth2\Client\Provider\GenericProvider([
+            'clientId' => env('OAUTH_CLIENT_ID'),
+            'clientSecret' => env('OAUTH_CLIENT_SECRET'),
+            'redirectUri' => env('OAUTH_REDIRECT_URI'),
+            'urlAuthorize' => 'https://example.com/oauth2/authorize',
+            'urlAccessToken' => 'https://example.com/oauth2/token',
+            'urlResourceOwnerDetails' => 'https://example.com/oauth2/resource'
+        ]);
+
+        // PKCE Support
+        $codeVerifier = bin2hex(random_bytes(32));
+        $codeChallenge = strtr(base64_encode(hash('sha256', $codeVerifier, true)), '+/', '-_');
+    }
+}
+                            </code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal CSRF -->
+        <div class="modal fade" id="modalCsrf" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-body">
+                    <div class="article-content">
+                        <h2>Exemple de code</h2>
+                        <pre><code class="language-php">
+// Middleware CSRF avancé
+class CsrfProtectionMiddleware implements MiddlewareInterface
+{
+    public function process(ServerRequestInterface $request): ResponseInterface
+    {
+        if ($this->isPostRequest($request)) {
+            $token = $request->getParsedBody()['csrf_token'] ?? '';
+            $storedToken = $_SESSION['csrf_token'] ?? '';
+            
+            if (!hash_equals($token, $storedToken)) {
+                throw new CsrfTokenException('Token CSRF invalide');
+            }
+        }
+
+        // Génération d'un nouveau token pour la prochaine requête
+        $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+        return $handler->handle($request);
+    }
+}
+                            </code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal JWT -->
+        <div class="modal fade" id="modalJwt" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-body">
+                    <div class="article-content">
+                        <h2>Exemple de code</h2>
+                        <pre><code class="language-php">
+// Service JWT sécurisé
+class JwtService
+{
+    #[Secure]
+    public function createToken(array $payload): string
+    {
+        $header = [
+            'typ' => 'JWT',
+            'alg' => 'HS256',
+            'kid' => $this->getKeyId()
+        ];
+
+        $payload['iat'] = time();
+        $payload['exp'] = time() + 3600;
+        $payload['jti'] = bin2hex(random_bytes(16));
+
+        return JWT::encode($payload, $this->getSecretKey(), 'HS256', null, $header);
+    }
+
+    #[Validate]
+    public function validateToken(string $token): array
+    {
+        try {
+            return JWT::decode($token, new Key($this->getSecretKey(), 'HS256'));
+        } catch (\Exception $e) {
+            throw new JwtException('Token invalide');
+        }
+    }
+}
+                            </code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal 2FA -->
+        <div class="modal fade" id="modal2fa" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-body">
+                    <div class="article-content">
+                        <h2>Exemple de code</h2>
+                        <pre><code class="language-php">
+// Service d'authentification 2FA
+class TwoFactorAuthService
+{
+    private $totp;
+
+    public function __construct()
+    {
+        $this->totp = new TOTP(
+            algorithm: 'sha256',
+            digits: 6,
+            period: 30,
+            secret: random_bytes(32)
+        );
+    }
+
+    public function generateQrCode(string $email): string
+    {
+        $provisioningUri = $this->totp->getProvisioningUri(
+            label: $email,
+            issuer: 'MonApplication'
+        );
+        
+        return QrCode::generate($provisioningUri);
+    }
+
+    public function verifyCode(string $code): bool
+    {
+        return $this->totp->verify($code);
+    }
+}
+                            </code></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal XSS -->
+        <div class="modal fade" id="modalXss" tabindex="-1" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered">
+                <div class="modal-body">
+                    <div class="article-content">
+                        <h2>Exemple de code</h2>
+                        <pre><code class="language-php">
+// Protection XSS avancée
+class XssProtection
+{
+    public function sanitize(string $input): string
+    {
+        return htmlspecialchars($input, ENT_QUOTES | ENT_HTML5, 'UTF-8');
+    }
+
+    #[ContentSecurityPolicy]
+    public function configureHeaders(): void
+    {
+        header("Content-Security-Policy: default-src 'self'; script-src 'self' 'nonce-" . 
+            base64_encode(random_bytes(16)) . "'; style-src 'self' 'unsafe-inline';");
+    }
+
+    public function validateInput(array $data): array
+    {
+        return array_map(function($value) {
+            if (is_string($value)) {
+                return $this->sanitize($value);
+            }
+            return $value;
+        }, $data);
+    }
+}
+                            </code></pre>
                     </div>
                 </div>
             </div>
