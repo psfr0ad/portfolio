@@ -621,34 +621,27 @@
     <!-- Modales pour les articles -->
     <div class="modal-container">
         <!-- Modales Frameworks -->
-        <div class="modal fade" id="modalSymfony7" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="modalSymfony7" tabindex="-1" aria-labelledby="modalSymfony7Label"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Symfony 7.0 : La révolution PHP</h5>
+                    <div class="modal-header bg-light">
+                        <h5 class="modal-title fw-bold" id="modalSymfony7Label">Symfony 7.0 : La révolution PHP</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
-                    <div class="modal-body">
-                        <div class="article-header">
-
-                            <div class="article-meta">
-
-                                <span class="category"><i class="fas fa-tag"></i> Framework</span>
+                    <div class="modal-body p-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <p class="lead mb-0">Symfony 7.0 marque une étape majeure dans l'évolution du framework.
+                                    Plus moderne que jamais, il adopte pleinement les nouveautés de PHP 8.3, simplifie
+                                    la configuration grâce à un usage accru des attributs, et renforce la sécurité avec
+                                    une gestion des tokens et des sessions plus fine. La performance est également au
+                                    rendez-vous grâce à une meilleure gestion du cache et à des optimisations internes.
+                                    Symfony 7.0 modernise son écosystème sans casser la compatibilité, faisant de cette
+                                    version un choix solide pour les projets d'envergure en 2025.</p>
                             </div>
                         </div>
                         <div class="article-content">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <p class="lead mb-0">Symfony 7.0 marque une étape majeure dans l’évolution du
-                                        framework. Plus moderne que jamais, il adopte pleinement les nouveautés de PHP
-                                        8.3, simplifie la configuration grâce à un usage accru des attributs, et
-                                        renforce la sécurité avec une gestion des tokens et des sessions plus fine. La
-                                        performance est également au rendez-vous grâce à une meilleure gestion du cache
-                                        et à des optimisations internes. Symfony 7.0 modernise son écosystème sans
-                                        casser la compatibilité, faisant de cette version un choix solide pour les
-                                        projets d’envergure en 2025.</p>
-                                </div>
-                            </div>
                             <h2>Exemple de code</h2>
                             <pre><code class="language-php">
 // Nouveau système de routing avec les attributs
@@ -682,26 +675,28 @@ public function getUserProfile(int $id): Response {
         </div>
 
         <!-- Modale Livewire -->
-        <div class="modal fade" id="modalLivewire" tabindex="-1" aria-hidden="true">
+        <div class="modal fade" id="modalLivewire" tabindex="-1" aria-labelledby="modalLivewireLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered">
                 <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">Livewire 3.0 : Le Full-Stack sans JavaScript</h5>
+                    <div class="modal-header bg-light">
+                        <h5 class="modal-title fw-bold" id="modalLivewireLabel">Livewire 3.0 : Le Full-Stack sans
+                            JavaScript</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fermer"></button>
                     </div>
-                    <div class="modal-body">
-                        <div class="article-content">
-                            <div class="card mb-4">
-                                <div class="card-body">
-                                    <p class="lead mb-0">Livewire 3.0 redéfinit le développement web en PHP en rendant
-                                        le full-stack accessible sans écrire une ligne de JavaScript. Grâce à une
-                                        communication instantanée entre le frontend et le backend, cette version apporte
-                                        des transitions fluides, un rendu ultra-rapide et une meilleure gestion de
-                                        l’état. Le support natif d’Alpine.js 3 et des composants dynamiques offre une
-                                        expérience moderne, tout en gardant la simplicité de Blade. Avec Livewire 3.0,
-                                        Laravel devient plus interactif que jamais… sans quitter PHP.</p>
-                                </div>
+                    <div class="modal-body p-4">
+                        <div class="card mb-4">
+                            <div class="card-body">
+                                <p class="lead mb-0">Livewire 3.0 redéfinit le développement web en PHP en rendant le
+                                    full-stack accessible sans écrire une ligne de JavaScript. Grâce à une communication
+                                    instantanée entre le frontend et le backend, cette version apporte des transitions
+                                    fluides, un rendu ultra-rapide et une meilleure gestion de l'état. Le support natif
+                                    d'Alpine.js 3 et des composants dynamiques offre une expérience moderne, tout en
+                                    gardant la simplicité de Blade. Avec Livewire 3.0, Laravel devient plus interactif
+                                    que jamais… sans quitter PHP.</p>
                             </div>
+                        </div>
+                        <div class="article-content">
                             <h2>Exemple de code</h2>
                             <pre><code class="language-php">
 // Composant Livewire moderne
@@ -765,12 +760,12 @@ class TodoList extends Component
                                 <div class="card-body">
                                     <p class="lead mb-0">API Platform 4.0 : APIs modernes avec Symfony
 
-                                        API Platform 4.0 propulse Symfony au sommet du développement d’APIs REST et
+                                        API Platform 4.0 propulse Symfony au sommet du développement d'APIs REST et
                                         GraphQL. Cette version mise sur la performance avec un système de cache HTTP
                                         amélioré, une meilleure sérialisation et une intégration poussée de Symfony 7.
                                         Le support natif de JSON:API, la documentation OpenAPI générée automatiquement
                                         et les filtres puissants en font une solution clé en main. Plus simple, plus
-                                        rapide, plus complète : API Platform 4.0 est l’outil idéal pour construire des
+                                        rapide, plus complète : API Platform 4.0 est l'outil idéal pour construire des
                                         APIs robustes en 2025.</p>
                                 </div>
                             </div>
@@ -810,7 +805,7 @@ class TodoList extends Component
                                             gestion des états et propose un support plus fluide pour SSR (Server-Side
                                             Rendering). Résultat : des applications modernes, réactives et maintenables,
                                             sans sacrifier la simplicité du développement backend Laravel. Inertia 2.0,
-                                            c’est le confort du full-stack, sans la lourdeur des API traditionnelles.
+                                            c'est le confort du full-stack, sans la lourdeur des API traditionnelles.
                                         </p>
                                     </div>
                                 </div>
@@ -847,9 +842,9 @@ class TodoList extends Component
                                             <p class="lead mb-0">OAuth 2.1 & OpenID Connect : Authentification moderne
                                                 en PHP
 
-                                                OAuth 2.1 simplifie et sécurise le protocole d’autorisation le plus
+                                                OAuth 2.1 simplifie et sécurise le protocole d'autorisation le plus
                                                 utilisé au monde, en supprimant les pratiques obsolètes (comme
-                                                l’Implicit Flow) et en renforçant la clarté. Couplé à OpenID Connect, il
+                                                l'Implicit Flow) et en renforçant la clarté. Couplé à OpenID Connect, il
                                                 permet une authentification fédérée robuste, idéale pour les APIs et
                                                 applications modernes. En PHP, des bibliothèques comme Laravel Passport,
                                                 league/oauth2-server ou OpenID Connect PHP facilitent leur intégration.
@@ -893,7 +888,7 @@ class TodoList extends Component
                                                         formulaires
 
                                                         Les attaques CSRF (Cross-Site Request Forgery) ciblent les
-                                                        actions effectuées sans le consentement réel de l’utilisateur.
+                                                        actions effectuées sans le consentement réel de l'utilisateur.
                                                         En PHP, la protection passe par des tokens uniques intégrés dans
                                                         chaque formulaire et vérifiés côté serveur. Les frameworks
                                                         modernes comme Laravel, Symfony ou Slim intègrent cette défense
@@ -939,7 +934,7 @@ class TodoList extends Component
                                                 <div class="card mb-4">
                                                     <div class="card-body">
                                                         <p class="lead mb-0">Les JWT (JSON Web Tokens) sont largement
-                                                            utilisés pour l’authentification stateless en PHP. Mais mal
+                                                            utilisés pour l'authentification stateless en PHP. Mais mal
                                                             configurés, ils deviennent une faille. Pour sécuriser vos
                                                             JWT : utilisez un algorithme de signature fort comme HS256
                                                             ou RS256, stockez-les côté client dans un HttpOnly cookie,
@@ -989,7 +984,7 @@ class TodoList extends Component
                                                                 modernes. En plus du mot de passe, un code temporaire
                                                                 (TOTP) est généré via une app comme Google Authenticator
                                                                 ou Microsoft Authenticator. Des bibliothèques PHP comme
-                                                                RobThree/TwoFactorAuth ou l’intégration native de
+                                                                RobThree/TwoFactorAuth ou l'intégration native de
                                                                 Laravel Fortify facilitent sa mise en place. Ajoutez à
                                                                 cela des QR codes, un fallback SMS ou email, et vous
                                                                 obtenez une protection efficace contre le vol de compte.
@@ -1040,9 +1035,9 @@ class TodoList extends Component
 
                                                                 En 2025, les attaques XSS (Cross-Site Scripting) restent
                                                                 l'une des menaces les plus courantes. La meilleure
-                                                                défense : ne jamais faire confiance à l’entrée
+                                                                défense : ne jamais faire confiance à l'entrée
                                                                 utilisateur. En PHP, utilisez systématiquement
-                                                                l’échappement contextuel (HTML, JS, URL), via des outils
+                                                                l'échappement contextuel (HTML, JS, URL), via des outils
                                                                 comme Twig ou Blade, qui le font par défaut. Ajoutez à
                                                                 cela des en-têtes HTTP comme Content-Security-Policy
                                                                 (CSP), le flag HttpOnly sur les cookies, et un encodage
@@ -1090,11 +1085,11 @@ class TodoList extends Component
                                                         <div class="card-body">
                                                             <p class="lead mb-0">PHP 8.4 : Les nouveautés attendues
 
-                                                                Prévue pour fin 2025, PHP 8.4 continue d’affiner les
+                                                                Prévue pour fin 2025, PHP 8.4 continue d'affiner les
                                                                 apports de la version 8.x avec des améliorations de
                                                                 performance, de lisibilité et de sécurité. Parmi les
                                                                 nouveautés attendues : un meilleur typage des propriétés
-                                                                dynamiques, l’introduction potentielle des readonly
+                                                                dynamiques, l'introduction potentielle des readonly
                                                                 classes, des améliorations sur les fibers (programmation
                                                                 asynchrone), et une gestion plus fine des exceptions.
                                                                 PHP 8.4 poursuit sa modernisation tout en conservant une
@@ -1326,11 +1321,13 @@ class TodoList extends Component
                                 </div>
 
                                 <!-- Modal Laravel 11 -->
-                                <div class="modal fade" id="modalLaravel11" tabindex="-1" aria-hidden="true">
+                                <div class="modal fade" id="modalLaravel11" tabindex="-1"
+                                    aria-labelledby="modalLaravel11Label" aria-hidden="true">
                                     <div class="modal-dialog modal-lg modal-dialog-centered">
                                         <div class="modal-content">
-                                            <div class="modal-header">
-                                                <h5 class="modal-title">Laravel 11 : Performance et Nouveautés</h5>
+                                            <div class="modal-header bg-light">
+                                                <h5 class="modal-title fw-bold" id="modalLaravel11Label">Laravel 11 :
+                                                    Performance et Nouveautés</h5>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
                                                     aria-label="Fermer"></button>
                                             </div>
@@ -1338,43 +1335,17 @@ class TodoList extends Component
                                                 <div class="card mb-4">
                                                     <div class="card-body">
                                                         <p class="lead mb-0">Laravel 11 introduit une structure de
-                                                            projet
-                                                            allégée,
-                                                            pensée
-                                                            pour
-                                                            accélérer le développement.
+                                                            projet allégée, pensée pour accélérer le développement.
                                                             Fini les fichiers inutiles : la configuration est
-                                                            centralisée,
-                                                            le
-                                                            routing
-                                                            simplifié
-                                                            et les
+                                                            centralisée, le routing simplifié et les
                                                             migrations sont plus concises. Côté performances, Laravel
-                                                            Octane
-                                                            a
-                                                            été
-                                                            optimisé
-                                                            pour
-                                                            une
+                                                            Octane a été optimisé pour une
                                                             exécution ultra-rapide avec Swoole ou RoadRunner. Cette
-                                                            version
-                                                            mise
-                                                            aussi
-                                                            sur
-                                                            la
-                                                            sécurité et
+                                                            version mise aussi sur la sécurité et
                                                             l'expérience développeur avec un nouvel auto-reload (php
-                                                            artisan
-                                                            serve
-                                                            --reload)
-                                                            et
-                                                            une
+                                                            artisan serve --reload) et une
                                                             meilleure détection des erreurs de chargement paresseux
-                                                            (lazy
-                                                            loading).
-                                                            Laravel
-                                                            11,
-                                                            c'est la
+                                                            (lazy loading). Laravel 11, c'est la
                                                             productivité sans compromis.</p>
                                                     </div>
                                                 </div>
@@ -1403,6 +1374,12 @@ class WelcomePage extends Page
 }
                             </code></pre>
                                                 </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary"
+                                                    data-bs-dismiss="modal">Fermer</button>
+                                                <a href="https://blog.laravel.com/laravel-11-released"
+                                                    class="btn btn-primary" target="_blank">Source originale</a>
                                             </div>
                                         </div>
                                     </div>
